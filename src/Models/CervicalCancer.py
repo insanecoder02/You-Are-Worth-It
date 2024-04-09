@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
-file_path = r"application\Models\kag_risk_factors_cervical_cancer.csv"
+file_path = r"src\Models\kag_risk_factors_cervical_cancer.csv"
 
 data = pd.read_csv(file_path)
 data.replace("?", np.nan, inplace=True)

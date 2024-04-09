@@ -3,7 +3,6 @@ import AvatarSelector from "./AvatarSelector";
 import studyImage from "./study.jpg";
 import playImage from "./play.jpg";
 import './Todo.css';
-
 function ToDo() {
   const [tasks, setTasks] = useState([]);
   const [taskImages, setTaskImages] = useState([]);
@@ -83,7 +82,6 @@ function ToDo() {
   return (
     <div className="to-do-list">
       <h1>Plan Your Day!</h1>
-      <img src="TodoHeader.png" alt="Plan Your Day" />
       <p className="todo-message">{getTodoMessage()}</p>
       <div className="inp">
         <input

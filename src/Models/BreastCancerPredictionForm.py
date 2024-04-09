@@ -3,12 +3,14 @@ from flask_cors import CORS
 import numpy as np
 import joblib
 import tensorflow as tf
-from tensorflow import keras
+import keras
 
 app = Flask(__name__)
-CORS(app, resources={r"/predict": {"origins": "*"}})
-model = keras.models.load_model('src/Models/breast_cancer_model.h5')
-scaler = joblib.load('src/Models/scaler.sav')
+CORS(app)
+file_path1= r"src\Models\breast_cancer_model.h5"
+f2=r"src\Models\scaler.sav"
+model = keras.models.load_model(file_path1)
+scaler = joblib.load(f2)
 
 @app.route('/predict', methods=['POST'])
 def predict():
