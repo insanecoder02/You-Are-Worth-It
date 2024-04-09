@@ -1,7 +1,7 @@
 .forum {
     top: 34.5rem;
-    left: 37.125rem;
-    font-size: var(--font-size-46xl);
+    left: 4rem;
+    font-size: 30px;
     font-weight: 800;
     font-family: var(--font-outfit);
     width: 15.563rem;
@@ -42,7 +42,7 @@
   .early-diagnosis-is-key-to-empo-parent {
     position: absolute;
     top: 13.375rem;
-    left: 59.506rem;
+    left: 57.506rem;
     border-radius: var(--br-26xl);
     background: linear-gradient(
       91.34deg,
@@ -51,8 +51,9 @@
       #cf92c9 56.5%,
       #de7fa5 96.5%
     );
-    width: 26.494rem;
+    width: 24.494rem;
     height: 18.625rem;
+    border-radius: 10%;
     overflow: hidden;
   }
   .tap-button-child {
@@ -119,6 +120,7 @@
     border-radius: 50%;
     width: 10.188rem;
     height: 9.813rem;
+    
   }
   .save-life-by-detecting-cervica-parent {
     position: absolute;
@@ -132,10 +134,12 @@
       #cf92c9 56.5%,
       #de7fa5 96.5%
     );
-    width: 26.494rem;
+    width: 24.494rem;
     height: 18.625rem;
     overflow: hidden;
     mix-blend-mode: normal;
+    border-radius: 10%;
+
   }
   .tap-button1 {
     cursor: pointer;
@@ -158,6 +162,7 @@
     left: 1.375rem;
     display: inline-block;
     width: 25.125rem;
+    
   }
   .breast-cancer {
     top: 3rem;
@@ -188,9 +193,10 @@
       #cf92c9 56.5%,
       #de7fa5 96.5%
     );
-    width: 26.494rem;
+    width: 24.494rem;
     height: 18.625rem;
     overflow: hidden;
+    border-radius: 10%;
     mix-blend-mode: normal;
   }
   .tap-button-inner,
@@ -264,12 +270,11 @@
     margin: 0;
     position: absolute;
     top: 6.813rem;
-    left: 25.25rem;
-    font-size: var(--font-size-46xl);
-    font-weight: 400;
+    left:4rem;
+    font-size: 30px;
+    font-weight: 800;
     font-family: inherit;
     display: inline-block;
-    width: 37.563rem;
     height: 5.125rem;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   }

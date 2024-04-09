@@ -60,6 +60,8 @@
 
 .prediction-result {
     margin-top: 20px;
+    font-size: large;
+    font-weight: 900px;
     text-align: center;
-    color: #28a745;
+    color: #00ff3c;
 }

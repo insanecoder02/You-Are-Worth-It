@@ -1,28 +1,24 @@
-from flask import Flask, request
-from flask_restful import Resource, Api
-from flask_cors import CORS
-import pickle
+import numpy as np
+from tensorflow.keras.models import load_model
+import joblib
+model = load_model('breast_cancer_model.h5')
+scaler = joblib.load('scaler.pkl')
 
-app = Flask(__name__)
-CORS(app) 
-api = Api(app)
+input_data = []
+for i in range(30): 
+    feature_value = float(input(f"Enter value for feature {i+1}: "))
+    input_data.append(feature_value)
 
-# Load the breast cancer prediction model
-breast_cancer_model = pickle.load(open('src\Models\BreastCancer.sav', 'rb'))
+input_data_as_numpy_array = np.asarray(input_data)
+input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
 
-class PredictBreastCancer(Resource):
-    def post(self):
-        data = request.get_json()
-        # Extract features from the incoming JSON data
-        features = [float(data[col]) for col in data]
-        # Make prediction using the loaded model
-        prediction = breast_cancer_model.predict([features])[0]
-        # Convert prediction to a float
-        prediction = float(prediction)
+input_data_std = scaler.transform(input_data_reshaped)
 
-        return {'prediction': prediction}
+prediction = model.predict(input_data_std)
+print(prediction)
 
-api.add_resource(PredictBreastCancer, '/predict_breast_cancer')
-
-if __name__ == "__main__":
-    app.run(debug=True)
+prediction_label = np.argmax(prediction, axis=1)
+if prediction_label[0] == 0:
+    print('The tumor is Malignant')
+else:
+    print('The tumor is Benign')

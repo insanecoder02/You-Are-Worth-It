@@ -29,14 +29,13 @@ const PCOSPredictionForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/predict', { input_data: formData, predictionType: 'pcos' });
+            const response = await axios.post('http://localhost:5000/predict', formData);
             setPrediction(response.data.prediction);
         } catch (error) {
             console.error('Error making prediction', error);
             alert('An error occurred while making the prediction.');
         }
     };
-    
     return (
         <div className="body">
         <div className="form-container">

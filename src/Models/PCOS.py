@@ -3,7 +3,7 @@ from flask_restful import Resource, Api
 from flask_cors import CORS
 import pickle
 app = Flask(__name__)
-CORS(app) 
+CORS(app, resources={r"/predict": {"origins": "*"}})
 api = Api(app)
 model = pickle.load(open('src\Models\PCOS.sav', 'rb'))
 class Predict(Resource):
@@ -28,8 +28,6 @@ class Predict(Resource):
         pred = float(pred)
 
         return {'prediction': pred}
-    
-
 api.add_resource(Predict, '/predict')
 
 if __name__ == "__main__":

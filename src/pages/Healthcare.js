@@ -1,5 +1,19 @@
 import "./Healthcare.css";
+import { useNavigate } from 'react-router-dom';
+
 const Healthcare = () => {
+  const navigate = useNavigate();
+
+  const handleButtonClick1 = () => {
+    navigate('/breastCancer');
+  };
+  const handleButtonClick2 = () => {
+    navigate('cervicalCancer');
+  };
+  const handleButtonClick3 = () => {
+    navigate('/pcos');
+  };
+
   return (
     <section className="desktop-1" id="mainpage">
       <h1 className="forum" id="FORUM">
@@ -21,7 +35,7 @@ const Healthcare = () => {
         />
       </div>
 
-      <button className="tap-button" id="PCOS_tap">
+      <button className="tap-button" id="PCOS_tap" onClick={handleButtonClick3}>
         <div className="tap-button-child" />
         <img className="arcticonstap-tap" alt="" src="/arcticonstaptap.svg" />
       </button>
@@ -38,10 +52,11 @@ const Healthcare = () => {
         </h4>
         <img className="frame-item" id="cc_img" alt="" src="/ellipse-3.svg" />
       </div>
-      <button className="tap-button1" id="cc_tap">
+      <button className="tap-button1" id="cc_tap" onClick={handleButtonClick2}>
         <div className="tap-button-child" />
         <img className="arcticonstap-tap" alt="" src="/arcticonstaptap.svg" />
       </button>
+
       <div className="knowing-your-breasts-could-sav-parent" id="Breast_Cancer">
         <p className="knowing-your-breasts" id="BC_para">
           Knowing Your Breasts Could Save Your Life
@@ -52,13 +67,12 @@ const Healthcare = () => {
         </h4>
         <img className="frame-inner" id="BC_img" alt="" src="/ellipse-2.svg" />
       </div>
-      <button className="tap-button2" id="bc_tap">
-       <img className="arcticonstap-tap" alt="" src="/arcticonstaptap.svg" />
-          <img className="vector-icon1" alt="" src="/vector.svg" />
-          <img className="vector-icon1" alt="" src="/vector.svg" />
-          <img className="vector-icon1" alt="" src="/vector.svg" />
+      
+      <button className="tap-button2" id="bc_tap" onClick={handleButtonClick1}>
+      <div className="tap-button-child" />
+        <img className="arcticonstap-tap" alt="" src="/arcticonstaptap.svg" />
       </button>
-      <h3 className="forum">AI DETECTION</h3>
+      <h3 className="ai-detection">AI DETECTION</h3>
     </section>
   );
 };
