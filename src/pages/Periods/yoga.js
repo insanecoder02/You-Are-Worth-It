@@ -8,40 +8,41 @@ function Yoga() {
   const handlePreferenceSelection = (selectedPreference) => {
     setPreference(selectedPreference);
     switch (selectedPreference) {
-      case 'menstrual':
-        setPoses([
-          { name: 'Child\'s Pose', image: 'childs-pose.jpg' },
-          { name: 'Seated Forward Bend', image: 'seated-forward-bend.jpg' },
-          { name: 'Supine Twist', image: 'supine-twist.jpg' }
-        ]);
-        break;
-      case 'sleeping':
-        setPoses([
-          { name: 'Legs Up the Wall', image: 'legs-up-the-wall.jpg' },
-          { name: 'Corpse Pose', image: 'corpse-pose.jpg' },
-          { name: 'Reclining Bound Angle Pose', image: 'reclining-bound-angle-pose.jpg' }
-        ]);
-        break;
-      case 'energizing':
-        setPoses([
-          { name: 'Sun Salutation', image: 'sun-salutation.jpg' },
-          { name: 'Warrior II', image: 'warrior-ii.jpg' },
-          { name: 'Cobra Pose', image: 'cobra-pose.jpg' }
-        ]);
-        break;
-      case 'mindfulness':
-        setPoses([
-          { name: 'Tree Pose', image: 'tree-pose.jpg' },
-          { name: 'Seated Meditation', image: 'seated-meditation.jpg' },
-          { name: 'Cat-Cow Stretch', image: 'cat-cow-stretch.jpg' }
-        ]);
-        break;
-      default:
-        setPoses([]);
-        break;
+       case 'menstrual':
+         setPoses([
+           { name: 'Child\'s Pose', image: childsPose },
+           { name: 'Seated Forward Bend', image: seatedForwardBend },
+           { name: 'Supine Twist', image: supineTwist }
+         ]);
+         break;
+       case 'sleeping':
+         setPoses([
+           { name: 'Legs Up the Wall', image: legsUpTheWall },
+           { name: 'Corpse Pose', image: corpsePose },
+           { name: 'Reclining Bound Angle Pose', image: recliningBoundAnglePose }
+         ]);
+         break;
+       case 'energizing':
+         setPoses([
+           { name: 'Sun Salutation', image: sunSalutation },
+           { name: 'Warrior II', image: warriorII },
+           { name: 'Cobra Pose', image: cobraPose }
+         ]);
+         break;
+       case 'mindfulness':
+         setPoses([
+           { name: 'Tree Pose', image: treePose },
+           { name: 'Seated Meditation', image: seatedMeditation },
+           { name: 'Cat-Cow Stretch', image: catCowStretch }
+         ]);
+         break;
+       default:
+         setPoses([]);
+         break;
     }
-  };
-
+   };
+   
+   
   return (
     <div className="yoga-container">
       <h2>What type of yoga are you interested in?</h2>

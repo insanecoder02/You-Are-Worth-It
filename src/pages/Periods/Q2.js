@@ -20,16 +20,13 @@ function Q2() {
         navigate('/draw');
         break;
       case 'watch-movie':
-        navigate('/movie');
-        break;
-      case 'play-motor-games':
-        navigate('/gesture');
+        navigate('/#mov');
         break;
       case 'read':
         navigate('/learn');
         break;
       case 'organize-our-day':
-        navigate('/todo');
+        navigate('/#tod');
         break;
       default:
         break;
@@ -45,7 +42,6 @@ function Q2() {
         <button className="button-relax" onClick={() => handleNavigation('relax')}>🛀 Relax</button>
         <button className="button-draw" onClick={() => handleNavigation('draw')}>🎨 Draw</button>
         <button className="button-movie" onClick={() => handleNavigation('watch-movie')}>🎬 Watch a Movie</button>
-        <button className="button-games" onClick={() => handleNavigation('play-motor-games')}>🎮 Play Motor Games</button>
         <button className="button-read" onClick={() => handleNavigation('Learn &Read')}>📚 Read</button>
         <button className="button-organize" onClick={() => handleNavigation('organize-our-day')}>📅 Organize Our Day</button>
       </div>

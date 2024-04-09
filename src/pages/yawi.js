@@ -140,7 +140,7 @@ const YAWI = () => {
             value={recommendedMovies.join("\n")}
           />
         </div>
-        <div className="absolute top-[153px] left-[72px] w-[367px] h-[202px]">
+        <div id='mov' className="absolute top-[153px] left-[72px] w-[367px] h-[202px]">
           <h3 className="m-0 absolute top-[0px] left-[4px] text-inherit leading-[36px] font-normal font-inherit flex items-center w-[363px] h-[66px]">
             Enter your favorite movie name 🎥
           </h3>
@@ -165,7 +165,7 @@ const YAWI = () => {
           src="/Line-5.png"
         />
       </div>
-      <div className="absolute w-[99.93%] right-[0.07%] bottom-[0px] left-[0%] h-[1331px] text-3xl">
+      <div id='tod' className="absolute w-[99.93%] right-[0.07%] bottom-[0px] left-[0%] h-[1331px] text-3xl">
       <Todo />
       </div>
       <div className="absolute w-[calc(100%_+_300px)] top-[1690px] right-[-310px] left-[50px] h-[542px] text-21xl text-dimgray">
