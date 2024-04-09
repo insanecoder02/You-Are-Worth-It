@@ -1,6 +1,19 @@
 import React, { useState } from 'react';
 import './Styles/yoga.css';
 
+import childsPoseImage from './Styles/childs-pose.png';
+import seatedForwardBendImage from './Styles/seatedForwardBend.png';
+import supineTwistImage from './Styles/supineTwist.png';
+import legsUpTheWallImage from './Styles/legsUpTheWall.png';
+import corpsePoseImage from './Styles/corpsePose.png';
+import recliningBoundAnglePoseImage from './Styles/recliningBoundAnglePose.png';
+import sunSalutationImage from './Styles/sunSalutation.png';
+import warriorIIImage from './Styles/warriorII.png';
+import cobraPoseImage from './Styles/cobraPose.png';
+import treePoseImage from './Styles/treePose.png';
+import seatedMeditationImage from './Styles/seatedMeditation.png';
+import catCowStretchImage from './Styles/catCowStretch.png';
+
 function Yoga() {
   const [preference, setPreference] = useState('');
   const [poses, setPoses] = useState([]);
@@ -10,30 +23,30 @@ function Yoga() {
     switch (selectedPreference) {
        case 'menstrual':
          setPoses([
-           { name: 'Child\'s Pose', image: childsPose },
-           { name: 'Seated Forward Bend', image: seatedForwardBend },
-           { name: 'Supine Twist', image: supineTwist }
+           { name: 'Child\'s Pose', image: childsPoseImage },
+           { name: 'Seated Forward Bend', image: seatedForwardBendImage },
+           { name: 'Supine Twist', image: supineTwistImage }
          ]);
          break;
        case 'sleeping':
          setPoses([
-           { name: 'Legs Up the Wall', image: legsUpTheWall },
-           { name: 'Corpse Pose', image: corpsePose },
-           { name: 'Reclining Bound Angle Pose', image: recliningBoundAnglePose }
+           { name: 'Legs Up the Wall', image: legsUpTheWallImage },
+           { name: 'Corpse Pose', image: corpsePoseImage },
+           { name: 'Reclining Bound Angle Pose', image: recliningBoundAnglePoseImage }
          ]);
          break;
        case 'energizing':
          setPoses([
-           { name: 'Sun Salutation', image: sunSalutation },
-           { name: 'Warrior II', image: warriorII },
-           { name: 'Cobra Pose', image: cobraPose }
+           { name: 'Sun Salutation', image: sunSalutationImage },
+           { name: 'Warrior II', image: warriorIIImage },
+           { name: 'Cobra Pose', image: cobraPoseImage }
          ]);
          break;
        case 'mindfulness':
          setPoses([
-           { name: 'Tree Pose', image: treePose },
-           { name: 'Seated Meditation', image: seatedMeditation },
-           { name: 'Cat-Cow Stretch', image: catCowStretch }
+           { name: 'Tree Pose', image: treePoseImage },
+           { name: 'Seated Meditation', image: seatedMeditationImage },
+           { name: 'Cat-Cow Stretch', image: catCowStretchImage }
          ]);
          break;
        default:

@@ -41,7 +41,7 @@
   }
   .early-diagnosis-is-key-to-empo-parent {
     position: absolute;
-    top: 13.375rem;
+    top: 7.375rem;
     left: 57.506rem;
     border-radius: var(--br-26xl);
     background: linear-gradient(
@@ -124,7 +124,7 @@
   }
   .save-life-by-detecting-cervica-parent {
     position: absolute;
-    top: 13.375rem;
+    top: 7.375rem;
     left: 31.756rem;
     border-radius: var(--br-26xl);
     background: linear-gradient(
@@ -183,7 +183,7 @@
   }
   .knowing-your-breasts-could-sav-parent {
     position: absolute;
-    top: 13.375rem;
+    top: 7.375rem;
     left: 4rem;
     border-radius: var(--br-26xl);
     background: linear-gradient(
@@ -269,7 +269,7 @@
   .ai-detection {
     margin: 0;
     position: absolute;
-    top: 6.813rem;
+    top: 2.813rem;
     left:4rem;
     font-size: 30px;
     font-weight: 800;
@@ -283,10 +283,22 @@
     position: relative;
     background-color: #6f9dac;
     filter: blur(0);
-    height: 64rem;
+    height: 30rem;
     overflow: hidden;
     text-align: left;
     font-size: var(--font-size-5xl);
     color: var(--color-black);
     font-family: var(--font-alfa-slab-one);
   }
+.accordion-item {
+  background-color: #DE7FA5; 
+}
+
+.accordion-button {
+  background-color: #6F9DAC; 
+  color: #000000;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #dddddd; 
+}

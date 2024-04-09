@@ -1,24 +1,26 @@
+from flask import Flask, request, jsonify
+from flask_cors import CORS
 import numpy as np
-from tensorflow.keras.models import load_model
 import joblib
-model = load_model('breast_cancer_model.h5')
-scaler = joblib.load('scaler.pkl')
+import tensorflow as tf
+from tensorflow import keras
 
-input_data = []
-for i in range(30): 
-    feature_value = float(input(f"Enter value for feature {i+1}: "))
-    input_data.append(feature_value)
+app = Flask(__name__)
+CORS(app, resources={r"/predict": {"origins": "*"}})
+model = keras.models.load_model('src/Models/breast_cancer_model.h5')
+scaler = joblib.load('src/Models/scaler.sav')
 
-input_data_as_numpy_array = np.asarray(input_data)
-input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
+@app.route('/predict', methods=['POST'])
+def predict():
+    data = request.json
+    input_data = np.array(data['input_data']).reshape(1, -1)
+    input_data_std = scaler.transform(input_data)
+    prediction = model.predict(input_data_std)
+    prediction_label = np.argmax(prediction)
+    if prediction_label == 0:
+        return jsonify({'prediction': 'Malignant'})
+    else:
+        return jsonify({'prediction': 'Benign'})
 
-input_data_std = scaler.transform(input_data_reshaped)
-
-prediction = model.predict(input_data_std)
-print(prediction)
-
-prediction_label = np.argmax(prediction, axis=1)
-if prediction_label[0] == 0:
-    print('The tumor is Malignant')
-else:
-    print('The tumor is Benign')
+if __name__ == '__main__':
+    app.run(debug=True)

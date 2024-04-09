@@ -1,58 +1,113 @@
+/* Eat.css */
+
+/* Base styles */
 .eat-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  height: 30rem;
+  text-align: center;
+  position: relative;
+}
+
+.eat-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('Q2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.eat-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.eat-container .preferences {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Buttons for Eat component */
+.eat-container .preferences button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #DE7FA5;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.eat-container .preferences button:hover {
+  background-color: #C06CB3;
+}
+
+/* Option list for Eat component */
+.eat-container .options {
+  z-index: 2;
+}
+
+.eat-container .option-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.eat-container .option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eat-container .option img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  .eat-container {
+    height: auto;
   }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+
+  .eat-container::before {
+    height: 100%;
   }
-  
-  .preferences {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+
+  .eat-container h2 {
+    font-size: 20px;
   }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-    transition: background-color 0.3s;
+
+  .eat-container .preferences {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
-  
-  button:hover {
-    background-color: #0056b3;
+
+  .eat-container .preferences button {
+    padding: 8px 16px;
   }
-  
-  .options {
-    margin-top: 20px;
+
+  .eat-container .option-list {
+    flex-wrap: wrap;
   }
-  
-  .option-list {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+
+  .eat-container .option img {
+    width: 80px;
+    height: 80px;
   }
-  
-  .option {
-    text-align: center;
-  }
-  
-  .option img {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .option p {
-    font-size: 16px;
-  }
-  
+}

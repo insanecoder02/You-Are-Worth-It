@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import './Styles/Eat.css';
 
+import cakeImage from './Styles/cake.png';
+import iceCreamImage from './Styles/ice-cream.png';
+import chocolateImage from './Styles/chocolate.png';
+import tacosImage from './Styles/tacos.png';
+import pizzaImage from './Styles/pizza.png';
+import curryImage from './Styles/curry.png';
+import frenchFriesImage from './Styles/french-fries.png';
+import popcornImage from './Styles/popcorn.png';
+import pretzelsImage from './Styles/pretzels.png';
+
 function Eat() {
   const [preference, setPreference] = useState('');
   const [options, setOptions] = useState([]);
@@ -10,23 +20,23 @@ function Eat() {
     switch (selectedPreference) {
       case 'sweet':
         setOptions([
-          { name: 'Cake', image: 'cake.jpg' },
-          { name: 'Ice Cream', image: 'ice-cream.jpg' },
-          { name: 'Chocolate', image: 'chocolate.jpg' }
+          { name: 'Cake', image: cakeImage },
+          { name: 'Ice Cream', image: iceCreamImage },
+          { name: 'Chocolate', image: chocolateImage }
         ]);
         break;
       case 'spicy':
         setOptions([
-          { name: 'Pizza', image: 'pizza.jpg' },
-          { name: 'Tacos', image: 'tacos.jpg' },
-          { name: 'Curry', image: 'curry.jpg' }
+          { name: 'Pizza', image: pizzaImage },
+          { name: 'Tacos', image: tacosImage },
+          { name: 'Curry', image: curryImage }
         ]);
         break;
       case 'salty':
         setOptions([
-          { name: 'French Fries', image: 'french-fries.jpg' },
-          { name: 'Popcorn', image: 'popcorn.jpg' },
-          { name: 'Pretzels', image: 'pretzels.jpg' }
+          { name: 'French Fries', image: frenchFriesImage },
+          { name: 'Popcorn', image: popcornImage },
+          { name: 'Pretzels', image: pretzelsImage }
         ]);
         break;
       default:

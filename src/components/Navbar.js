@@ -36,7 +36,7 @@ const Navbar = () => {
       >
         <div className="absolute top-[0px] right-[0px] rounded-31xl bg-powderblue-100 w-[121px] h-[35px]" />
         <b className="absolute top-[0px] right-[0px] text-xl leading-[27.5px] flex font-montserrat text-dimgray text-center items-center justify-center w-[121px] h-[35px]">
-          Fun
+          Period Wellness
         </b>
       </button>
       <button
