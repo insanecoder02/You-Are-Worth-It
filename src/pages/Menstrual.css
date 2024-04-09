@@ -1,23 +1,10 @@
 .og {
   padding: 20px;
-  height: 30rem;
   text-align: center;
   position: relative;
+  background-color: #6F9DAC;
  }
  
- .og::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(10px); 
-  z-index: -1; 
- }
 .calendar-container {
   text-align: center;
   background-color: #6F9DAC;
