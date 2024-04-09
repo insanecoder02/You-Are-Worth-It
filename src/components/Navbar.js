@@ -5,11 +5,11 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleConnectClick = useCallback(() => {
-    navigate("/fun");
+    navigate("/mood");
   }, [navigate]);
 
   const onPlayRectangleClick = useCallback(() => {
-    navigate("/health");
+    navigate("/healthcare");
   }, [navigate]);
 
   const forRelax = useCallback(() => {

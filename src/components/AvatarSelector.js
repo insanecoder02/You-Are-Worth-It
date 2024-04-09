@@ -9,7 +9,7 @@ function AvatarSelector({ images, onSelect, image }) {
 
  const handleImageClick = (image) => {
     onSelect(image);
-    setIsDropdownVisible(false); // Hide the dropdown after selecting an image
+    setIsDropdownVisible(false);
  };
 
  return (

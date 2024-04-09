@@ -6,11 +6,11 @@
 
 .h1 {
   font-size: 4rem;
-  color: rgb(194, 255, 250);
+  color: rgb(172, 224, 220);
 }
 
 .todo-message {
-  color: rgb(194, 255, 250);
+  color: rgb(172, 224, 220);
   font-size: 1.6rem;
 }
 
@@ -18,7 +18,7 @@ button {
   font-size: 1.7rem;
   font-weight: bold;
   padding: 10px 20px;
-  color: rgb(194, 255, 250);
+  color: rgb(172, 224, 220);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -67,7 +67,7 @@ li {
   font-size: 2rem;
   font-weight: bold;
   padding: 15px;
-  background-color: rgb(194, 255, 250);
+  background-color: rgb(172, 224, 220);
   margin-bottom: 10px;
   border: 3px solid hsla(0, 0%, 85%, 0.75);
   border-radius: 5px;
@@ -96,13 +96,13 @@ li {
 
 .placeholder {
   padding: 10px;
-  border: 1px solid rgb(194, 255, 250);
+  border: 1px solid rgb(172, 224, 220);
 }
 
 .dropdown-menu {
   position: absolute;
-  background-color: rgb(194, 255, 250);
-  border: 1px solid rgb(194, 255, 250);
+  background-color: rgb(172, 224, 220);
+  border: 1px solid rgb(172, 224, 220);
   padding: 10px;
   z-index: 1;
 }
@@ -124,7 +124,7 @@ li {
   font-size: 1.6rem;
   padding: 10px;
   border: 2px solid hsla(0, 0%, 80%, 0.5);
-  background-color: rgb(194, 255, 250);
+  background-color: rgb(172, 224, 220);
   border-radius: 5px;
   color: hsla(0, 0%, 0%, 0.5);
 }

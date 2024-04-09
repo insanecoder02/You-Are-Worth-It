@@ -5,6 +5,7 @@ const Healthcare = () => {
       <h1 className="forum" id="FORUM">
         FORUM
       </h1>
+
       <div className="early-diagnosis-is-key-to-empo-parent" id="PCOS">
         <p className="early-diagnosis-is" id="PCOS_para">
           early diagnosis is key to empower you
@@ -19,6 +20,7 @@ const Healthcare = () => {
           src="/ellipse-4.svg"
         />
       </div>
+
       <button className="tap-button" id="PCOS_tap">
         <div className="tap-button-child" />
         <img className="arcticonstap-tap" alt="" src="/arcticonstaptap.svg" />
@@ -51,14 +53,12 @@ const Healthcare = () => {
         <img className="frame-inner" id="BC_img" alt="" src="/ellipse-2.svg" />
       </div>
       <button className="tap-button2" id="bc_tap">
-        <img className="tap-button-inner" alt="" src="/ellipse-1.svg" />
-        <button className="arcticonstap-tap2">
-          <img className="vector-icon" alt="" src="/vector.svg" />
+       <img className="arcticonstap-tap" alt="" src="/arcticonstaptap.svg" />
           <img className="vector-icon1" alt="" src="/vector.svg" />
-          <img className="vector-icon2" alt="" src="/vector.svg" />
-        </button>
+          <img className="vector-icon1" alt="" src="/vector.svg" />
+          <img className="vector-icon1" alt="" src="/vector.svg" />
       </button>
-      <h3 className="ai-detection">AI DETECTION</h3>
+      <h3 className="forum">AI DETECTION</h3>
     </section>
   );
 };
