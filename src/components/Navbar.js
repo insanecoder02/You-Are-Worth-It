@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const handleConnectClick = () => {
-    window.location.href = 'https://discord.gg/sG7D6nhqSH';
-  };
+  const handleConnectClick = useCallback(() => {
+    navigate("/fun");
+  }, [navigate]);
+
   const onPlayRectangleClick = useCallback(() => {
-    navigate("/playgames");
+    navigate("/health");
   }, [navigate]);
 
   const forRelax = useCallback(() => {
