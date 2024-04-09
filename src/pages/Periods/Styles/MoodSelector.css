@@ -1,40 +1,58 @@
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
+  padding: 20px;
+  height: 20rem;
+  text-align: center;
+  position: relative;
+ }
+ 
+ .container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px); 
+  z-index: -1; 
+ }
+ 
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
+    z-index: 2;
   }
   
   .button-container {
     display: flex;
     justify-content: center;
+    z-index: 2;
     gap: 10px;
     margin-bottom: 20px;
   }
   
-  button {
+  .mood-button {
     padding: 10px 20px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: #DE7FA5 ;
     color: #fff;
     transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+    z-index: 2;
+}
+
+.mood-button:hover {
+    background-color: #DE7FA5;
+}
   .affirmation {
     font-size: 18px;
     margin-bottom: 20px;
+    z-index: 2;
   }
   
   .next-button {
@@ -43,12 +61,12 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #28a745;
+    background-color: #DE7FA5;
     color: #fff;
     transition: background-color 0.3s;
-  }
+    z-index: 2;
+}
   
   .next-button:hover {
-    background-color: #218838;
-  }
-  
+    background-color: #C06CB3;
+}

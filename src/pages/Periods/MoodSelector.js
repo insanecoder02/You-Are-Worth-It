@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Styles/MoodSelector.css';
-
+import Menstrual from '../Menstrual';
 function MoodSelector() {
   const [mood, setMood] = useState('');
   const navigate = useNavigate();
@@ -22,18 +22,21 @@ function MoodSelector() {
   };
 
   return (
+    <>
     <div className="container">
       <h2>How's your mood today?</h2>
       <div className="button-container">
-        <button onClick={() => handleMoodSelection('happy')}>Happy</button>
-        <button onClick={() => handleMoodSelection('sad')}>Sad</button>
-        <button onClick={() => handleMoodSelection('anxious')}>Anxious</button>
-        <button onClick={() => handleMoodSelection('excited')}>Excited</button>
-        <button onClick={() => handleMoodSelection('tired')}>Tired</button>
+      <button className="mood-button" onClick={() => handleMoodSelection('happy')}>😄 Happy</button>
+        <button className="mood-button" onClick={() => handleMoodSelection('sad')}>😔 Sad</button>
+        <button className="mood-button" onClick={() => handleMoodSelection('anxious')}>😰 Anxious</button>
+        <button className="mood-button" onClick={() => handleMoodSelection('excited')}>😃 Excited</button>
+        <button className="mood-button" onClick={() => handleMoodSelection('tired')}>😴 Tired</button>
       </div>
       {mood && <p className="affirmation">{affirmations[mood]}</p>}
       {mood && <button className="next-button" onClick={navigateToNextComponent}>Next Page</button>}
     </div>
+    <Menstrual/>
+    </>
   );
 }
 

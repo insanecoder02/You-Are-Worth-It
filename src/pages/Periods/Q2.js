@@ -37,17 +37,17 @@ function Q2() {
   };
 
   return (
-    <div className="options-container">
+    <div className="ocontainer">
       <h2>What would you like to do?</h2>
       <div className="button-container">
-        <button onClick={() => handleNavigation('eat')}>Eat</button>
-        <button onClick={() => handleNavigation('yoga')}>Yoga</button>
-        <button onClick={() => handleNavigation('relax')}>Relax</button>
-        <button onClick={() => handleNavigation('draw')}>Draw</button>
-        <button onClick={() => handleNavigation('watch-movie')}>Watch a Movie</button>
-        <button onClick={() => handleNavigation('play-motor-games')}>Play Motor Games</button>
-        <button onClick={() => handleNavigation('read')}>Read</button>
-        <button onClick={() => handleNavigation('organize-our-day')}>Organize Our Day</button>
+      <button className="button-eat" onClick={() => handleNavigation('eat')}>🍽️ Eat</button>
+        <button className="button-yoga" onClick={() => handleNavigation('yoga')}>🧘‍♀️ Yoga</button>
+        <button className="button-relax" onClick={() => handleNavigation('relax')}>🛀 Relax</button>
+        <button className="button-draw" onClick={() => handleNavigation('draw')}>🎨 Draw</button>
+        <button className="button-movie" onClick={() => handleNavigation('watch-movie')}>🎬 Watch a Movie</button>
+        <button className="button-games" onClick={() => handleNavigation('play-motor-games')}>🎮 Play Motor Games</button>
+        <button className="button-read" onClick={() => handleNavigation('Learn &Read')}>📚 Read</button>
+        <button className="button-organize" onClick={() => handleNavigation('organize-our-day')}>📅 Organize Our Day</button>
       </div>
     </div>
   );

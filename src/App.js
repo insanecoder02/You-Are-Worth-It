@@ -17,6 +17,7 @@ import Q2 from "./pages/Periods/Q2";
 import Eat from "./pages/Periods/Eat";
 import Yoga from "./pages/Periods/yoga";
 import Healthcare from "./pages/Healthcare";
+import Menstrual from "./pages/Menstrual";
 function App() {
   const action = useNavigationType();
   const location = useLocation();
@@ -100,6 +101,7 @@ function App() {
       <Route path="/eat" element={<Eat/>} />
       <Route path="/yoga" element={<Yoga/>} />
       <Route path="/healthcare" element={<Healthcare/>} />
+      <Route path="/menstrual" element={<Menstrual/>} />
     </Routes>
   );
 }

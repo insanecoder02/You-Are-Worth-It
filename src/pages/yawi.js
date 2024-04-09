@@ -168,7 +168,7 @@ const YAWI = () => {
       <div className="absolute w-[99.93%] right-[0.07%] bottom-[0px] left-[0%] h-[1331px] text-3xl">
       <Todo />
       </div>
-      <div className="absolute w-[calc(100%_+_260px)] top-[1690px] right-[-310px] left-[50px] h-[542px] text-21xl text-dimgray">
+      <div className="absolute w-[calc(100%_+_300px)] top-[1690px] right-[-310px] left-[50px] h-[542px] text-21xl text-dimgray">
         <div className="absolute w-[calc(100%_-_1129px)] top-[26px] right-[1129px] left-[0px] h-[431px]">
           <div className="absolute w-full top-[0px] right-[0px] left-[0px] rounded-31xl [background:linear-gradient(30.11deg,_#b8d5cb,_rgba(244,_255,_248,_0))] h-[431px]" />
           <h3 className="m-0 absolute w-[60.77%] top-[87px] left-[37.48%] text-inherit leading-[40px] font-normal font-inherit flex items-center h-[344px]">
@@ -183,7 +183,7 @@ const YAWI = () => {
             src="norm.png"
           />
         </div>
-        <div className="absolute w-[calc(95%_-_593px)] top-[0px] right-[0px] left-[593px] h-[542px]">
+        <div className="absolute w-[calc(95%_-_593px)] top-[0px] right-[0px] left-[553px] h-[542px]">
           <div className="absolute w-[calc(100%_-_360px)] top-[26px] right-[360px] left-[0px] rounded-31xl [background:linear-gradient(77.91deg,_#ff78a4,_rgba(184,_213,_200,_0))] h-[431px]" />
           <h3 className="m-0 absolute w-[39.75%] top-[132px] left-[3.43%] text-inherit leading-[50px] font-normal font-inherit inline-block h-[325px]">
             <p className="[margin-block-start:0] [margin-block-end:15px]">

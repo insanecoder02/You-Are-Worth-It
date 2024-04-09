@@ -70,9 +70,10 @@ const Navbar = () => {
           className="cursor-pointer [border:none] p-0 bg-powderblue-100 absolute top-[0px] right-[0px] rounded-31xl w-[101px] h-[35px]"
           autoFocus={true}
         />
-        <b className="absolute top-[0px] right-[0px] text-xl leading-[27.5px] flex font-montserrat text-dimgray text-center items-center justify-center w-[101px] h-[35px]">
-          Learn
-        </b>
+       <b className="absolute top-[0px] right-[0px] text-xl leading-[27.5px] flex font-montserrat text-dimgray text-center items-center justify-center w-[101px] h-[35px]" style={{ zIndex: 2 }}>
+ Learn
+</b>
+
       </button>
     </header>
   );

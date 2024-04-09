@@ -1,33 +1,110 @@
-.options-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+.ocontainer {
+  padding: 20px;
+  height: 30rem;
+  text-align: center;
+  position: relative;
+ }
+ 
+ .ocontainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('Q2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px); 
+  z-index: -1; 
+ }
+ h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  z-index: 2;
+ }
+ 
+ .button-container {
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+  gap: 10px;
+  margin-bottom: 20px;
+ }
+ @keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+ }
+  50% {
+    transform: translateY(-5px);
+ }
+}
+@keyframes float2 {
+  0%, 100% {
+    transform: translateY(0);
+ }
+  50% {
+    transform: translateY(-10px);
+ }
+}
+.button-eat {
+  background-color: #DE7FA5;
+  animation: float 2s ease-in-out infinite;
+ }
+ 
+ .button-yoga {
+  background-color: #C06CB3;
+  animation: float2 2s ease-in-out infinite;
+ }
+ 
+ .button-relax {
+  background-color: #9370DB;
+  animation: float 2s ease-in-out infinite;
+ }
+ 
+ .button-draw {
+  background-color: #FFA500;
+  animation: float2 2s ease-in-out infinite;
+ }
+ 
+ .button-movie {
+  background-color: #008000;
+  animation: float 2s ease-in-out infinite;
+ }
+ 
+ .button-games {
+  background-color: #FF4500;
+  animation: float2 2s ease-in-out infinite;
+ }
+ 
+ .button-read {
+  background-color: #FFD700;
+  animation: float 2s ease-in-out infinite;
+ }
+ 
+ .button-organize {
+  background-color: #800080;
+  animation: float2 2s ease-in-out infinite;
+ }
+ 
+ button:hover {
+  background-color: #C06CB3;
+ }
+ 
+ button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #DE7FA5; 
+  color: #fff;
+  transition: background-color 0.3s;
+  z-index: 2;
+ }
+ 
+ button:hover {
+  background-color: #C06CB3;
+ }
+ 
