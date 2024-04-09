@@ -2,16 +2,18 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import numpy as np
 import pickle
+from tensorflow.keras.models import load_model
+import joblib
 
 app = Flask(__name__)
 CORS(app)
 
+# Load the breast cancer model and scaler
+breast_cancer_model = load_model('breast_cancer_model.h5')
+breast_cancer_scaler = joblib.load('scaler.pkl')
 # Load the models and scalers
 pcos_model = pickle.load(open('pcos_model.pkl', 'rb'))
 pcos_scaler = pickle.load(open('pcos_scaler.pkl', 'rb'))
-
-breast_cancer_model = pickle.load(open('breast_cancer_model.pkl', 'rb'))
-breast_cancer_scaler = pickle.load(open('breast_cancer_scaler.pkl', 'rb'))
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -40,13 +42,19 @@ def predict():
         pred = float(pred)
 
         return {'prediction': pred}
-
+    
     elif prediction_type == 'breastCancer':
-        
+        input_data_reshaped = np.asarray(input_data).reshape(1, -1)
+        input_data_std = breast_cancer_scaler.transform(input_data_reshaped)
+        prediction = breast_cancer_model.predict(input_data_std)
+        prediction_label = np.argmax(prediction, axis=1)
+        if prediction_label[0] == 0:
+            result = 'Malignant'
+        else:
+            result = 'Benign'
+        return jsonify({'prediction': result})
     else:
         return jsonify({'error': 'Invalid prediction type'}), 400
-
-    return jsonify({'prediction': result})
 
 if __name__ == "__main__":
     app.run(debug=True)

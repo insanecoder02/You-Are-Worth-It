@@ -1,5 +1,5 @@
 import "./Healthcare.css";
-const Desktop = () => {
+const Healthcare = () => {
   return (
     <section className="desktop-1" id="mainpage">
       <h1 className="forum" id="FORUM">
@@ -63,4 +63,4 @@ const Desktop = () => {
   );
 };
 
-export default Desktop;
+export default Healthcare;

@@ -17,7 +17,7 @@ const Learn = () => {
 
       <Link
         className="[text-decoration:none] absolute w-[50.35%] top-[176px] right-[30.07%] left-[19.58%] h-[366px] text-[15px] text-[inherit]"
-        to="http://localhost:8080/api/videos/basic-human-nature"
+        to="http://localhost:8080/api/videos/Priyanshi's edu vid"
       >
         <div className="absolute w-full top-[0px] right-[0%] left-[0%] rounded-xl bg-darkcyan h-[366px]" />
         <img
@@ -59,7 +59,7 @@ const Learn = () => {
 
       <Link
         className="[text-decoration:none] absolute w-[24.44%] top-[176px] right-[4.17%] left-[71.39%] h-[366px] text-11xl text-[inherit]"
-        to="http://localhost:8080/api/videos/embrace-yourself"
+        to="http://localhost:8080/api/videos/Priyanshi's edu vid"
       >
         <div className="absolute w-full top-[0px] right-[0%] left-[0%] rounded-xl bg-gray-500 h-[366px]" />
         <img
@@ -82,7 +82,7 @@ const Learn = () => {
 
       <Link
         className="[text-decoration:none] absolute w-[17.99%] top-[659px] right-[62.43%] left-[19.58%] h-[313px] text-[inherit]"
-        to="http://localhost:8080/api/videos/basic-human-nature"
+        to="http://localhost:8080/api/videos/Priyanshi's edu vid"
        >
         <div className="absolute w-full top-[0px] right-[0%] left-[0%] rounded-xl bg-gray-400 h-[313px]" />
         <img
@@ -123,7 +123,7 @@ const Learn = () => {
 
       <Link
         className="[text-decoration:none] absolute w-[17.99%] top-[659px] right-[23.54%] left-[58.47%] h-[313px] text-[inherit]"
-        to="http://localhost:8080/api/videos/computer-ai"
+        to="http://localhost:8080/api/videos/Priyanshi's edu vid"
       >
         <div className="absolute w-full top-[0px] right-[0%] left-[0%] rounded-xl bg-gray-400 h-[313px]" />
         <img
@@ -205,7 +205,7 @@ const Learn = () => {
 
       <Link
         className="[text-decoration:none] absolute w-[17.99%] top-[659px] right-[42.99%] left-[39.03%] h-[313px] text-[inherit]"
-        to="http://localhost:8080/api/videos/embrace-yourself"
+        to="http://localhost:8080/api/videos/Priyanshi's edu vid"
       >
         <div className="absolute w-full top-[0px] right-[0%] left-[0%] rounded-xl bg-gray-400 h-[313px]" />
         <img
