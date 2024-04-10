@@ -1,5 +1,16 @@
-## You-Are-Worth-It
-##Getting Started
+## YAWI - You-Are-Worth-It
+## Features
+1. **Menstrual Health:**
+   - Track menstrual cycles, receive mood swing tips, and self-care suggestions.
+2. **Healthcare:**
+   - Early detection focus, access info on PCOS, Breast Cancer, and Cervical Cancer.
+3. **Leisure & Relaxation:**
+   - Sensory rooms, movie recommendations, EmoSense for emotions.
+4. **Learning Section:**
+5. **Autism-Friendly Features:**
+   - Visual schedule, social norms guidance, positive affirmations.
+     
+Getting Started
 <hr>
 To get started with Yawi, follow these steps:
 1) Clone the repository: git clone https://github.com/Xxteria/You-Are-Worth-It.git<br>
