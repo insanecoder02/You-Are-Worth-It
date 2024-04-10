@@ -1,6 +1,7 @@
+require('dotenv').config();
 const { MongoClient, ObjectId } = require('mongodb');
 const uri = process.env.MONGODB_URI;  
-const client = new MongoClient('mongodb+srv://Cyphers:Autiembrace@cluster0.vdsgquy.mongodb.net/');
+const client = new MongoClient(process.env.URI);
 
 async function connect() {
   try {

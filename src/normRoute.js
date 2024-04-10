@@ -1,12 +1,12 @@
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const { client } = require('./dbNorm'); 
-
 const { getSocialNormById } = require('./normController');
 
 router.get('/api/social-norms/random', async (req, res) => {
   try {
-    const database = client.db('Autiembrace');
+    const database = client.db(process.env.NAME);
     console.log("Collections:", await database.listCollections().toArray());   
     const socialNormsCollection = database.collection('Social Norms'); 
     const count = await socialNormsCollection.countDocuments();

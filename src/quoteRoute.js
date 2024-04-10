@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const router = express.Router();
 const { getQuoteById } = require('./quoteController');
@@ -5,7 +6,7 @@ const { client } = require('./db');
 
 router.get('/api/quotes/random', async (req, res) => {
   try {
-    const database = client.db('Autiembrace');
+    const database = client.db(process.env.NAME);
     console.log("Collections:", await database.listCollections().toArray()); 
     const quotesCollection = database.collection('Quotes Database'); 
     const count = await quotesCollection.countDocuments();

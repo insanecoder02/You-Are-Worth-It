@@ -1,8 +1,9 @@
+require('dotenv').config();
 const { client, ObjectId } = require('./dbNorm');
 async function getSocialNormById(req, res) {
   const id = req.params.id;
   try {
-    const database = client.db('Autiembrace');
+    const database = client.db(process.env.NAME);
     console.log("Collections:", await database.listCollections().toArray());
     const socialNormsCollection = database.collection('Social Norms');
     const query = { "_id": new ObjectId(id) };

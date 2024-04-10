@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -32,7 +33,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 // Database connections
-mongoose.connect('mongodb+srv://Cyphers:Autiembrace@cluster0.vdsgquy.mongodb.net/Autiembrace?retryWrites=true&w=majority')
+mongoose.connect(process.env.URI)
   .then(() => console.log("DB Connected"))
   .catch(err => console.error('Connection error', err));
 

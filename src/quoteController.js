@@ -1,9 +1,9 @@
 const { client, ObjectId } = require('./db');
-
+require('dotenv').config();
 async function getQuoteById(req, res) {
   const id = req.params.id;
   try {
-    const database = client.db('Autiembrace');
+    const database = client.db(process.env.NAME);
     console.log("Collections:", await database.listCollections().toArray());
     const quotesCollection = database.collection('Quotes Database'); 
     const query = { "_id": new ObjectId(id) };
