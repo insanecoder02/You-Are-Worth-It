@@ -22,6 +22,8 @@ import { ColorPicker, DrawingCanvas } from "./components/DrawingComponents";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEraser } from "@fortawesome/free-solid-svg-icons";
 import BreastCancerPredictionForm from "./Models/BreastCancerPredictionForm";
+import CervicalCancerForm from "./Models/CervicalCancer";
+
 function App() {
   const location = useLocation();
   const pathname = location.pathname;
@@ -169,6 +171,7 @@ function App() {
         }
       />
       <Route path="/BreastCancer" element={<BreastCancerPredictionForm/>} />
+      <Route path="/cervicalCancer" element={<CervicalCancerForm/>} />
     </Routes>
   );
 }
